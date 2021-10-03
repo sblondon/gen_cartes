@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Gentium;
+    src: url(http://example.com/fonts/Gentium.otf);
+}
+h1 { font-family: Gentium }
+
+.coin_carte {
+    height: 1cm;
+    width: 1cm;
+    font-family: monospace;
+    border: 1px solid brown;
+    background-color: blanchedalmond;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+.vertical_carte {
+    height: 4cm;
+    width: 1cm;
+    font-family: monospace;
+    border: 1px solid red;
+    background-color: yellowgreen;
+    margin: 0;
+    vertical-align: middle;
+}
+.horizontal_carte {
+    height: 1cm;
+    width: 4cm;
+    font-family: monospace;
+    border: 1px solid blueviolet;
+    background-color: pink;
+    margin: 0;
+    text-align: center;
+}
+.centre_carte {
+    height: 4cm;
+    width: 4cm;
+    font-family: monospace;
+    border: 1px solid black;
+    background-color: aquamarine;
+    margin: 0;
+}

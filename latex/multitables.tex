@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[margin=3cm]{geometry}
+\usepackage{array}
+\usepackage[table]{xcolor}
+
+\begin{document}
+
+\begingroup
+\renewcommand\arraystretch{1.3}
+\noindent\begin{tabular}{
+  | >{\ttfamily\raggedright}p{2cm}
+  | >{\sffamily\raggedright}p{2.5cm}
+  | >{\sffamily}p{\dimexpr\textwidth-6\tabcolsep-4\fboxsep-4.5cm\relax} |
+}
+\hline
+d\_super & struct disk\_superblock &
+  \begin{tabular}[t]{
+    | >{\ttfamily\raggedright}p{0.5cm}
+    | >{\sffamily\raggedright}p{0.5cm}
+    | >{\sffamily}p{\dimexpr\textwidth-12\tabcolsep-5\fboxsep-7.5cm\relax} |
+  }
+  \firsthline
+  \multicolumn{1}{|l|}{Name} 
+    & \multicolumn{1}{l|}{\cellcolor{gray!20}\bfseries Type} 
+    & \multicolumn{1}{l|}{\cellcolor{gray!20}\bfseries Description} \\
+  \hline
+  magic & char array & desc 1 \\
+  \hline
+  magic & char array & desc 2 \\
+  \hline
+  \end{tabular} \\[15ex]
+\hline
+ibmap & void\textsuperscript{*} & Pointer to l-Nodes bitmap \\
+\hline
+ibmap & void\textsuperscript{*} & Pointer to l-Nodes bitmap \\
+\hline
+\end{tabular}
+\endgroup
+
+\end{document}

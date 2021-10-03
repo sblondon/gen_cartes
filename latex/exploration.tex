@@ -1,0 +1,49 @@
+\documentclass[a4paper]{article}
+
+\usepackage{array}
+
+% taille carte 55 mm x 80 mm
+
+\input{newcommand_icones.tex}
+
+\pagenumbering{gobble}
+
+\begin{document}
+\begin{table}[ht]
+  \begin{center}
+    \caption{Exploration}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      \textbf{Avancées} & \textbf{Découverte} & \textbf{Avancées}\\
+       & & \\
+      \illusExploration & \illusExploration & \illusExploration\\
+       & 1110.1 & a\\
+       & 1110.1 & a\\
+      \iconeVide & & \\
+      \iconeChien \iconeEffet \iconeDeplacement & \iconeExplore & \iconeTraineau \iconeEffet \iconeDeplacement\\
+       & 1110.1 & a\\
+      \hline
+      \textbf{Tempête} & \textbf{Crevasse} & \textbf{Campement}\\
+       & &  \\
+      \illusExploration & \illusExploration & \illusExploration\\
+       & 1110.1 & a\\
+       & & \\
+      \iconeAutresJoueurs & \iconeAutresJoueurs & \iconeAutresJoueurs\\
+      \iconeFinDeplacement & \iconeFinTraineau & \iconeFinNourriture \iconeOu \iconeFinHomme\\
+       & & \\
+      \hline
+      \textbf{Avancées} & \textbf{Crevasse} & \textbf{Campement}\\
+       & & \\
+      \illusExploration & \illusExploration & \illusExploration\\
+      titre & 1110.1 & a\\
+       & & \\
+       & \iconeAutresJoueurs & \iconeAutresJoueurs\\
+      \iconeDeplacement \iconeDeplacement & \iconeFinChien \iconeOu \iconeFinTraineau & \iconeFinNourriture \iconeOu \iconeFinHomme\\
+       & & \\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\end{document}
