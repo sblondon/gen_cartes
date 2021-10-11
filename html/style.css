@@ -2,6 +2,11 @@
     font-family: Gentium;
     src: url(http://example.com/fonts/Gentium.otf);
 }
+
+@page {
+    margin: 0.5cm; /* Set margin on each page */
+  }
+
 h1 { font-family: Gentium }
 
 
