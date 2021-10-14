@@ -2,12 +2,17 @@ from weasyprint import HTML, CSS
 from weasyprint.text.fonts import FontConfiguration
 
 
-font_config = FontConfiguration()
 
-html = HTML(filename="html/index.html")
+def create_pdf():
+    font_config = FontConfiguration()
 
-css = CSS(filename="html/style.css",
-    font_config=font_config)
-html.write_pdf(
-    'example.pdf', stylesheets=[css],
-    font_config=font_config)
+    html = HTML(filename="html/index.html")
+
+    css = CSS(filename="html/style.css",
+        font_config=font_config)
+    html.write_pdf(
+        'example.pdf', stylesheets=[css],
+        font_config=font_config)
+
+
+create_pdf()
