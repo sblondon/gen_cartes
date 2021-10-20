@@ -14,7 +14,7 @@ build: prep explo
 
 clean:
 	rm -f exploration.aux exploration.log *~
-	rm -rf  venv
+	rm -rf venv html/index.html
 
 venv: clean
 	python3 -m venv venv
