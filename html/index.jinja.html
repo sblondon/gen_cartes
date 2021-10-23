@@ -1,7 +1,8 @@
 <!--    <h1>The title</h1>
     <p>Content goes herefzefez
 -->
-{% for _ in [0, 1, 2] %}
+
+{% for carte in cartes %}
         <table>
             <tr>
                 <td class="carte">
@@ -9,23 +10,23 @@
                     <table>
                         <tr>
                             <td class="coin_carte">+</td>
-                            <td class="horizontal_carte"><img src="./icones/baseline_home_black_24dp.png"></td>
+                            <td class="horizontal_carte"><img src="{{ carte['haut'] }}"></td>
                             <td class="coin_carte">+</td>
                         </tr>
                         <tr>
-                            <td class="vertical_carte"><img src="./icones/baseline_home_black_24dp.png"></td>
+                            <td class="vertical_carte"><img src="{{ carte['gauche'] }}"></td>
                             <td class="centre_carte">
-                                Admunsen<br>
-                                <img src="./icones/baseline_home_black_24dp.png">
+                                {{ carte['contenu']['titre'] }}<br>
+                                <img src="{{ carte['contenu']['image'] }}">
                                 <br>
                                 <br>
                                 AA
 			            </td>
-                            <td class="vertical_carte"><img src="./icones/baseline_home_black_24dp.png"></td>
+                            <td class="vertical_carte"><img src="{{ carte['droite'] }}"></td>
                         </tr>
                         <tr>
                             <td class="coin_carte">+</td>
-                            <td class="horizontal_carte"><img src="./icones/baseline_home_black_24dp.png"></td>
+                            <td class="horizontal_carte"><img src="{{ carte['bas'] }}"></td>
                             <td class="coin_carte">+</td>
                         </tr>
                     </table>
@@ -40,7 +41,7 @@
                         </tr>
                         <tr>
                             <td class="vertical_carte"><img src="./icones/baseline_home_black_24dp.png"></td>
-                            <td class="centre_carte">AA</td>
+                            <td class="centre_carte">BB</td>
                             <td class="vertical_carte"><img src="./icones/baseline_home_black_24dp.png"></td>
                         </tr>
                         <tr>
@@ -61,7 +62,7 @@
                         </tr>
                         <tr>
                             <td class="vertical_carte"><img src="./icones/baseline_home_black_24dp.png"></td>
-                            <td class="centre_carte">AA</td>
+                            <td class="centre_carte">CC</td>
                             <td class="vertical_carte"><img src="./icones/baseline_home_black_24dp.png"></td>
                         </tr>
                         <tr>
@@ -71,8 +72,6 @@
                         </tr>
                     </table>
                 </td>
-
-
             </tr>
 
         </table>
