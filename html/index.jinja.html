@@ -16,12 +16,15 @@
                         </tr>
                         <tr>
                             <td class="vertical_carte"><img src="{{ carte['gauche'] }}"></td>
-                            <td class="centre_carte">
+                            <td class="centre_carte"><div style="background-image: url('{{ carte['contenu']['fond'] }}');">
                                 {{ carte['contenu']['titre'] }}<br>
                                 <img src="{{ carte['contenu']['image'] }}">
                                 <br>
                                 <br>
+                                <br>
+                                <br>
                                 AA
+                                </div>
 			            </td>
                             <td class="vertical_carte"><img src="{{ carte['droite'] }}"></td>
                         </tr>

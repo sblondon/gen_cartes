@@ -4,8 +4,8 @@ from weasyprint.text.fonts import FontConfiguration
 
 
 
-illusExploration = "illustration_exploration"
-illusPreparation = "illustration_preparation"
+illusExploration = "../images/illustration_exploration.png"
+illusPreparation = "../images/illustration_preparation.png"
 iconeVide = "images/icones/vide_black_24dp.png"
 iconeEffet = "material-design-icons/png/navigation/east/materialicons/24dp/2x/baseline_east_black_24dp.png"
 iconeOu = "../images/icones/ou_black_24dp.png"
@@ -35,21 +35,21 @@ CARTES = [
         "droite": iconeVetement,
         "haut": iconeFinHomme,
         "bas": iconeFinChien,
-        "contenu": {"titre": "Admunsen", "image": iconeCapitaine}
+        "contenu": {"titre": "Admunsen", "image": iconeCapitaine, "fond": illusPreparation}
     },
     {
         "gauche": iconeFinDeplacement,
         "droite": "./icones/baseline_home_black_24dp.png",
         "haut": "./icones/baseline_home_black_24dp.png",
         "bas": "./icones/baseline_home_black_24dp.png",
-        "contenu": {"titre": "AA", "image": "./icones/baseline_home_black_24dp.png"}
+        "contenu": {"titre": "AA", "image": "./icones/baseline_home_black_24dp.png", "fond": illusExploration}
     },
     {
         "gauche": "./icones/baseline_home_black_24dp.png",
         "droite": "./icones/baseline_home_black_24dp.png",
         "haut": "./icones/baseline_home_black_24dp.png",
         "bas": "./icones/baseline_home_black_24dp.png",
-        "contenu": {"titre": "BB", "image": "./icones/baseline_home_black_24dp.png"}
+        "contenu": {"titre": "BB", "image": "./icones/baseline_home_black_24dp.png", "fond": illusPreparation}
     },
 ]
 
