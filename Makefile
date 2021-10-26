@@ -21,3 +21,6 @@ venv: clean
 	./venv/bin/pip install --upgrade pip
 	./venv/bin/pip install weasyprint
 	./venv/bin/pip install jinja2
+
+icons:
+	git clone https://github.com/google/material-design-icons.git
