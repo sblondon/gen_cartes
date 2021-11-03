@@ -1,5 +1,3 @@
-.PHONY: html
-
 pdf:
 	mkdir --parent build/
 	./venv/bin/python3 ./html/gen_cartes.py pdf
