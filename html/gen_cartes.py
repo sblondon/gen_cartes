@@ -70,7 +70,7 @@ def _create_html():
     jinja_content = open("html/index.jinja.html").read()
     template = Template(jinja_content)
     html_content = template.render(lignes_cartes=_cartes_par_lignes(CARTES))
-    open("html/index.html", "w").write(html_content)
+    open("build/index.html", "w").write(html_content)
     return html_content
 
 
@@ -78,18 +78,18 @@ def create_browsable_html():
     html_content = _create_html()
     css = open("html/style.css").read()
     browsable_content = f"<html><head><style>{css}</style></head><body>{html_content}</body></hmtl>"
-    open("html/index.browsable.html", "w").write(browsable_content)
+    open("build/index.browsable.html", "w").write(browsable_content)
 
 
 def create_pdf():
     _create_html()
 
     font_config = FontConfiguration()
-    html = HTML(filename="html/index.html")
+    html = HTML(filename="build/index.html")
     css = CSS(filename="html/style.css",
         font_config=font_config)
     html.write_pdf(
-        'example.pdf', stylesheets=[css],
+        'build/example.pdf', stylesheets=[css],
         font_config=font_config)
 
 if __name__ == "__main__":

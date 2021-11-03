@@ -1,11 +1,12 @@
 .PHONY: html
 
 pdf:
+	mkdir --parent build/
 	./venv/bin/python3 ./html/gen_cartes.py pdf
 
 browsable:
+	mkdir --parent build/
 	./venv/bin/python3 ./html/gen_cartes.py browsable
-
 
 prep:
 	pdflatex preparation.tex
@@ -17,7 +18,7 @@ build: prep explo
 
 clean:
 	rm -f exploration.aux exploration.log *~
-	rm -rf venv html/index.html
+	rm -rf venv html/index.html build
 
 venv: clean
 	python3 -m venv venv
