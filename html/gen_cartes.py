@@ -31,7 +31,7 @@ iconeTempete = "../material-design-icons/png/places/ac_unit/materialicons/24dp/2
 
 CARTES = [
     {
-        "gauche": iconeOu,
+        "gauche": iconeVetement,
         "droite": iconeVetement,
         "haut": iconeFinHomme,
         "bas": iconeFinChien,
@@ -69,6 +69,9 @@ def create_html():
     template = Template(jinja_content)
     html_content = template.render(lignes_cartes=_cartes_par_lignes(CARTES))
     open("html/index.html", "w").write(html_content)
+    css = open("html/style.css").read()
+    browsable_content = f"<html><head><style>{css}</style></head><body>{html_content}</body></hmtl>"
+    open("html/index.browsable.html", "w").write(browsable_content)
 
 
 
