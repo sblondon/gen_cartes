@@ -44,14 +44,14 @@ CARTES = [
         "droite": iconeArme,
         "haut": iconeSacADos,
         "bas": iconeDeplacement,
-        "contenu": {"titre": "AA", "image": "./icones/baseline_home_black_24dp.png", "fond": illusExploration}
+        "contenu": {"titre": "AA", "image": iconeArme, "fond": illusExploration}
     },
     {
         "gauche": iconeDeplacement,
         "droite": iconeDeplacement,
         "haut": iconeDeplacement,
         "bas": iconeDeplacement,
-        "contenu": {"titre": "BB", "image": "./icones/baseline_home_black_24dp.png", "fond": illusPreparation}
+        "contenu": {"titre": "BB", "image": iconeArme, "fond": illusPreparation}
     },
 ]
 
