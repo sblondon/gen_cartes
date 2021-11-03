@@ -1,7 +1,10 @@
 .PHONY: html
 
-html:
-	./venv/bin/python3 ./html/gen_cartes.py
+pdf:
+	./venv/bin/python3 ./html/gen_cartes.py pdf
+
+browsable:
+	./venv/bin/python3 ./html/gen_cartes.py browsable
 
 
 prep:

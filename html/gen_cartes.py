@@ -1,3 +1,5 @@
+import sys
+
 from jinja2 import Template
 from weasyprint import HTML, CSS
 from weasyprint.text.fonts import FontConfiguration
@@ -64,19 +66,23 @@ def _cartes_par_lignes(cartes):
 
     return cartes
 
-def create_html():
+def _create_html():
     jinja_content = open("html/index.jinja.html").read()
     template = Template(jinja_content)
     html_content = template.render(lignes_cartes=_cartes_par_lignes(CARTES))
     open("html/index.html", "w").write(html_content)
+    return html_content
+
+
+def create_browsable_html():
+    html_content = _create_html()
     css = open("html/style.css").read()
     browsable_content = f"<html><head><style>{css}</style></head><body>{html_content}</body></hmtl>"
     open("html/index.browsable.html", "w").write(browsable_content)
 
 
-
 def create_pdf():
-    create_html()
+    _create_html()
 
     font_config = FontConfiguration()
     html = HTML(filename="html/index.html")
@@ -86,4 +92,8 @@ def create_pdf():
         'example.pdf', stylesheets=[css],
         font_config=font_config)
 
-create_pdf()
+if __name__ == "__main__":
+    if sys.argv[1] == "browsable":
+        create_browsable_html()
+    else:
+        create_pdf()
