@@ -89,7 +89,7 @@ def create_pdf():
     css = CSS(filename="html/style.css",
         font_config=font_config)
     html.write_pdf(
-        'build/example.pdf', stylesheets=[css],
+        'build/cartes.pdf', stylesheets=[css],
         font_config=font_config)
 
 if __name__ == "__main__":
