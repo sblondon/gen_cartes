@@ -30,8 +30,8 @@ iconeDeplacement = "../material-design-icons/png/maps/directions_walk/materialic
 iconeFinDeplacement = "../images/icones/walk_off.png"
 iconeTempete = "../material-design-icons/png/places/ac_unit/materialicons/24dp/2x/baseline_ac_unit_black_24dp.png"
 
-
-CARTES = [
+def _cartes():
+    return [
     {
         "gauche": iconeVetement,
         "droite": iconeVetement,
@@ -57,7 +57,7 @@ CARTES = [
 
 
 def _cartes_par_lignes():
-    cartes = CARTES
+    cartes = _cartes()
     CARTES_PAR_LIGNE = 3
     return [
         cartes[i:i+CARTES_PAR_LIGNE]
