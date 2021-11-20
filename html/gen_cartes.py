@@ -5,9 +5,10 @@ from weasyprint import HTML, CSS
 from weasyprint.text.fonts import FontConfiguration
 
 
-
-illusExploration = "../images/illustration_exploration.png"
-illusPreparation = "../images/illustration_preparation.png"
+ILLUSTRATIONS = {
+    "exploration": "../images/illustration_exploration.png",
+    "preparation": "../images/illustration_preparation.png",
+}
 iconeVide = "../images/icones/vide_black_24dp.png"
 iconeEffet = "../material-design-icons/png/navigation/east/materialicons/24dp/2x/baseline_east_black_24dp.png"
 iconeOu = "../images/icones/ou_black_24dp.png"
@@ -37,24 +38,23 @@ def _cartes():
         "droite": iconeVetement,
         "haut": iconeFinHomme,
         "bas": iconeFinChien,
-        "contenu": {"titre": "Admunsen", "image": iconeCapitaine, "fond": illusPreparation}
+        "contenu": {"titre": "Admunsen", "image": iconeCapitaine, "fond": ILLUSTRATIONS["preparation"]}
     },
     {
         "gauche": iconeFinDeplacement,
         "droite": iconeArme,
         "haut": iconeSacADos,
         "bas": iconeDeplacement,
-        "contenu": {"titre": "AA", "image": iconeArme, "fond": illusExploration}
+        "contenu": {"titre": "AA", "image": iconeArme, "fond": ILLUSTRATIONS["exploration"]}
     },
     {
         "gauche": iconeDeplacement,
         "droite": iconeDeplacement,
         "haut": iconeDeplacement,
         "bas": iconeDeplacement,
-        "contenu": {"titre": "BB", "image": iconeArme, "fond": illusPreparation}
+        "contenu": {"titre": "BB", "image": iconeArme, "fond": ILLUSTRATIONS["preparation"]}
     },
 ]
-
 
 def _cartes_par_lignes():
     cartes = _cartes()
