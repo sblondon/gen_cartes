@@ -56,7 +56,8 @@ CARTES = [
 ]
 
 
-def _cartes_par_lignes(cartes):
+def _cartes_par_lignes():
+    cartes = CARTES
     CARTES_PAR_LIGNE = 3
     return [
         cartes[i:i+CARTES_PAR_LIGNE]
@@ -69,7 +70,7 @@ def _cartes_par_lignes(cartes):
 def _create_html():
     jinja_content = open("html/index.jinja.html").read()
     template = Template(jinja_content)
-    html_content = template.render(lignes_cartes=_cartes_par_lignes(CARTES))
+    html_content = template.render(lignes_cartes=_cartes_par_lignes())
     open("build/index.html", "w").write(html_content)
     return html_content
 
