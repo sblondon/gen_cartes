@@ -1,4 +1,5 @@
 import sys
+import csv
 
 from jinja2 import Template
 from weasyprint import HTML, CSS
@@ -35,29 +36,23 @@ ICONES = {
 }
 
 def _cartes():
-    return [
-    {
-        "gauche": ICONES["vetement"],
-        "droite": ICONES["vetement"],
-        "haut": ICONES["finHomme"],
-        "bas": ICONES["finChien"],
-        "contenu": {"titre": "Admunsen", "image": ICONES["capitaine"], "fond": ILLUSTRATIONS["preparation"]}
-    },
-    {
-        "gauche": ICONES["finDeplacement"],
-        "droite": ICONES["arme"],
-        "haut": ICONES["sacADos"],
-        "bas": ICONES["deplacement"],
-        "contenu": {"titre": "AA", "image": ICONES["arme"], "fond": ILLUSTRATIONS["exploration"]}
-    },
-    {
-        "gauche": ICONES["deplacement"],
-        "droite": ICONES["deplacement"],
-        "haut": ICONES["deplacement"],
-        "bas": ICONES["deplacement"],
-        "contenu": {"titre": "BB", "image": ICONES["arme"], "fond": ILLUSTRATIONS["preparation"]}
-    },
-]
+    with open('html/cartes.exemple.csv') as f:
+        cartes = []
+        csv_reader = csv.DictReader(f)
+        for ligne in csv_reader:
+            carte = {
+                "gauche": ICONES[ligne["gauche"]],
+                "droite": ICONES[ligne["droite"]],
+                "haut": ICONES[ligne["haut"]],
+                "bas": ICONES[ligne["bas"]],
+                "contenu": {
+                    "titre": ligne["titre"],
+                    "image": ICONES[ligne["centre"]],
+                    "fond": ILLUSTRATIONS[ligne["pile"]]
+                },
+            }
+            cartes.append(carte)
+    return cartes
 
 def _cartes_par_lignes():
     cartes = _cartes()
