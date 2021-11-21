@@ -6,6 +6,8 @@ from weasyprint import HTML, CSS
 from weasyprint.text.fonts import FontConfiguration
 
 
+CSV_CARTES = "html/cartes.exemple.csv"
+
 ILLUSTRATIONS = {
     "exploration": "../images/illustration_exploration.png",
     "preparation": "../images/illustration_preparation.png",
@@ -36,7 +38,7 @@ ICONES = {
 }
 
 def _cartes():
-    with open('html/cartes.exemple.csv') as f:
+    with open(CSV_CARTES) as f:
         cartes = []
         csv_reader = csv.DictReader(f)
         for ligne in csv_reader:
