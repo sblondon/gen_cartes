@@ -37,19 +37,25 @@ ICONES = {
     "tempete": "../material-design-icons/png/places/ac_unit/materialicons/24dp/2x/baseline_ac_unit_black_24dp.png",
 }
 
+
+
+def _icone(donnees, emplacement):
+    nom = donnees[emplacement] or "vide"
+    return ICONES[nom]
+
 def _cartes():
     with open(CSV_CARTES) as f:
         cartes = []
         csv_reader = csv.DictReader(f)
         for ligne in csv_reader:
             carte = {
-                "gauche": ICONES[ligne["gauche"]],
-                "droite": ICONES[ligne["droite"]],
-                "haut": ICONES[ligne["haut"]],
-                "bas": ICONES[ligne["bas"]],
+                "gauche": _icone(ligne, "gauche"),
+                "droite": _icone(ligne, "droite"),
+                "haut": _icone(ligne, "haut"),
+                "bas": _icone(ligne, "bas"),
                 "contenu": {
                     "titre": ligne["titre"],
-                    "image": ICONES[ligne["centre"]],
+                    "image": _icone(ligne, "centre"),
                     "fond": ILLUSTRATIONS[ligne["pile"]]
                 },
             }

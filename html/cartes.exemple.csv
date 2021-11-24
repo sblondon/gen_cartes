@@ -2,7 +2,8 @@ pile,titre,haut,droite,bas,gauche,centre
 preparation,Admunsen,finHomme,vetement,finChien,vetement,capitaine
 exploration,AA,sacADos,arme,deplacement,finDeplacement,arme
 preparation,BB,deplacement,deplacement,deplacement,deplacement,arme
-preparation,Rien,vide,vide,vide,vide,vide
+preparation,Rien 1,vide,vide,vide,vide,vide
+preparation,Rien 2,,,,,
 exploration,AA,effet,ou,autresJoueurs,bateau,chien
 preparation,BB,finChien,nourriture,finNourriture,traineau,finTraineau
 preparation,Admunsen,homme,explore,tempete,vetement,capitaine
