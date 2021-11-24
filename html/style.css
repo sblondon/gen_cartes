@@ -18,8 +18,8 @@ table {
     height: 0.9cm;
     width: 0.9cm;
     font-family: monospace;
-    border: 1px solid brown;
-    background-color: blanchedalmond;
+    /*border: 1px solid brown;
+    background-color: blanchedalmond;*/
     margin: 0;
     padding: 0;
     vertical-align: middle;
@@ -29,8 +29,8 @@ table {
     height: 4cm;
     width: 0.9cm;
     font-family: monospace;
-    border: 1px solid red;
-    background-color: yellowgreen;
+    /*border: 1px solid red;
+    background-color: yellowgreen;*/
     margin: 0;
     padding: 0;
     vertical-align: middle;
@@ -39,8 +39,8 @@ table {
     height: 0.9cm;
     width: 4cm;
     font-family: monospace;
-    border: 1px solid blueviolet;
-    background-color: pink;
+    /*border: 1px solid blueviolet;
+    background-color: pink;*/
     margin: 0;
     padding: 0;
     text-align: center;
@@ -49,8 +49,8 @@ table {
     height: 4cm;
     width: 4cm;
     font-family: monospace;
-    border: 1px solid black;
-    background-color: aquamarine;
+    /*border: 1px solid black;
+    background-color: aquamarine;*/
     margin: 0;
     padding: 0;
     text-align: center;
