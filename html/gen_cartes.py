@@ -43,6 +43,13 @@ def _icone(donnees, emplacement):
     nom = donnees[emplacement] or "vide"
     return ICONES[nom]
 
+def _icones(donnees, emplacement):
+    icones = []
+    for donnee in donnees[emplacement].split("|"):
+        nom = donnee or "vide"
+        icones.append(ICONES[nom])
+    return icones
+
 def _cartes():
     with open(CSV_CARTES) as f:
         cartes = []
@@ -50,7 +57,7 @@ def _cartes():
         for ligne in csv_reader:
             carte = {
                 "gauche": _icone(ligne, "gauche"),
-                "droite": _icone(ligne, "droite"),
+                "droite": _icones(ligne, "droite"),
                 "haut": _icone(ligne, "haut"),
                 "bas": _icone(ligne, "bas"),
                 "contenu": {

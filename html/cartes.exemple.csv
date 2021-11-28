@@ -1,5 +1,5 @@
 pile,titre,haut,droite,bas,gauche,centre
-preparation,Admunsen,finHomme,vetement,finChien,vetement,capitaine
+preparation,Admunsen,finHomme,vetement|vetement,finChien,vetement,capitaine
 exploration,AA,sacADos,arme,deplacement,finDeplacement,arme
 preparation,BB,deplacement,deplacement,deplacement,deplacement,arme
 preparation,Rien 1,vide,vide,vide,vide,vide

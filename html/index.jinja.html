@@ -26,7 +26,11 @@
                                 AA
                                 </div>
 			            </td>
-                            <td class="vertical_carte"><img src="{{ carte['droite'] }}"></td>
+                            <td class="vertical_carte">
+                                {% for icone in carte['droite'] %}
+                                <img src="{{ icone }}">
+                                {% endfor %}
+                            </td>
                         </tr>
                         <tr>
                             <td class="coin_carte">+</td>
