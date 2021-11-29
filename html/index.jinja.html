@@ -15,13 +15,19 @@
                             <td class="coin_carte">+</td>
                         </tr>
                         <tr>
-                            <td class="vertical_carte"><img src="{{ carte['gauche'] }}"></td>
+                            <td class="vertical_carte">
+                                {% for icone in carte['gauche'] %}
+                                <img src="{{ icone }}">
+                                {% endfor %}
+                            </td>
                             <td class="centre_carte"><div style="background-image: url('{{ carte['contenu']['fond'] }}');">
                                 {{ carte['contenu']['titre'] }}<br>
                                 <br>
                                 <br>
                                 <br>
-                                <img src="{{ carte['contenu']['image'] }}">
+                                {% for icone in carte['contenu']['image'] %}
+                                <img src="{{ icone }}">
+                                {% endfor %}
                                 <br>
                                 AA
                                 </div>
