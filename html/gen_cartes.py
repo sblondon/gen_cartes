@@ -16,7 +16,7 @@ ILLUSTRATIONS = {
 ICONES = {
     "vide": "../images/icones/vide_black_24dp.png",
     "effet": "../material-design-icons/png/navigation/east/materialicons/24dp/2x/baseline_east_black_24dp.png",
-    "ou": "../images/icones/ou_black_24dp.png",
+    "ou": "../images/icones/ou_black_court.png",
     "autresJoueurs": "../material-design-icons/png/social/groups/materialicons/24dp/2x/baseline_groups_black_24dp.png",
     "sacADos": "../material-design-icons/png/places/backpack/materialicons/24dp/2x/baseline_backpack_black_24dp.png",
     "capitaine": "../images/icones/capitaine.png",
