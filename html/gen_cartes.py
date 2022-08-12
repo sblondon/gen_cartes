@@ -55,18 +55,19 @@ def _cartes():
         cartes = []
         csv_reader = csv.DictReader(f)
         for ligne in csv_reader:
-            carte = {
-                "gauche": _icones(ligne, "gauche"),
-                "droite": _icones(ligne, "droite"),
-                "haut": _icone(ligne, "haut"),
-                "bas": _icone(ligne, "bas"),
-                "contenu": {
-                    "titre": ligne["titre"],
-                    "image": _icones(ligne, "centre"),
-                    "fond": ILLUSTRATIONS[ligne["pile"]]
-                },
-            }
-            cartes.append(carte)
+            if not ligne["pile"].startswith("#"):
+                carte = {
+                    "gauche": _icones(ligne, "gauche"),
+                    "droite": _icones(ligne, "droite"),
+                    "haut": _icone(ligne, "haut"),
+                    "bas": _icone(ligne, "bas"),
+                    "contenu": {
+                        "titre": ligne["titre"],
+                        "image": _icones(ligne, "centre"),
+                        "fond": ILLUSTRATIONS[ligne["pile"]]
+                    },
+                }
+                cartes.append(carte)
     return cartes
 
 def _cartes_par_lignes():
